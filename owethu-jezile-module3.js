@@ -204,7 +204,7 @@ let confirmPassword;
 let currentEmail;
 let confirmEmail;
 
-ternaries for the if checks
+//ternaries for the if checks
 let passWordMessage = newPassword === confirmPassword ? "successfully created" : "your passwords do not match please check and try again";
 
 let emailMessage = currentEmail == confirmEmail ? "successfully created" : "your emails do not match please check and try again";
@@ -213,7 +213,73 @@ let passWordSafetyMessage = newPassword != currentEmail ? "you cannot have your 
 
 let passWordLengthMessage = newPassword.length<=8 ? "please make sure your password is atleast 8 characters long" : "succesfully created";
 
+/* i used === for the password to make sure the type is the same as well and its a string the password requires
+ */
 
+//challenge 3
+/*i predict 13
+ step by step - 3*4=12 then 2+12-1= 13*/
+1. 2 + 3 * 4 - 1
+
+/*i predict 15
+step by step - solve the brackets first 2+3=5 and 4-1=3 then 5*3=15 */
+2. (2 + 3) * (4 - 1)
+
+/*i predict 4
+step by step - 10-4=6 then 6-2=4 */
+3. 10 - 4 - 2
+
+/*i predict 64
+step by step - 2**3 = 8 then 8**2=64
+actual answer - 512 */
+4. 2 ** 3 ** 2 
+
+/*i predict 3
+step by step -10%3=1 then 1*2=2 then 2+1=3 */
+5. 10 % 3 * 2 + 1
+
+/*i predict 5
+step by step -100/4=25 then 25/5=5 */
+6. 100 / 4 / 5
+
+/*i predict true
+step by step - 5+2=7 then 6&&3=3 then 7>3<4 */
+7. 5 + 2 > 6 && 3 < 4
+
+/*i predict true
+step by step- true&&false=false then true&&true=true then false||true=true */
+8. true && false || true && true
+
+/*i predeict true
+step by step- !false=true then !!0=0/true then false && true */
+9. !false && !!0
+
+/*i predict true
+step by step- !(2 === "2")=true then 3 && 10=10 then 5>10<20=false then false || true  */
+10. 5 > 3 && 10 < 20 || !(2 === "2")
+
+/*i predict 1125
+step by tep- 1000*0.9=900 then 900*1.15=1035 */
+11. 1000 * 1.15 * 0.9 
+
+/* i predict number
+step by step -5+1=6 then you run it 
+answer came back as number1 which is interesting*/
+12. typeof 5 + 1
+
+/* i predict number
+// step by step- 5+1=6 then you run it */
+13. typeof (5 + 1)
+
+/*i predict 56
+step by step- 3*2=6 then "5"+6 */
+14. "5" + 3 * 2
+
+/*i predict 4because of implicit conversion
+step by step "5"-3=2 then 2+2=4 */
+15. "5" - 3 + 2
+
+/*interview answer- you add parentheses to make code easy to ready */
 
 
 
