@@ -115,7 +115,105 @@ console.log(`Welcome back ${firstName} ${lastName}, you are ${age1} years old.`)
   
   3-a nested ternary is not good practice because harder to read and maintain*/
 
-  
+//Challenge 2
+//part A
+
+/*i think it wil be true because 0 is equals to false in a boolean 
+  actual result - as predicted*/
+1. 0 == false;
+
+/*i think false because its different data type one is boolean one is number
+  actual result - as predicted */
+2. 0 === false;
+
+/*i predict false because no value in the first operand
+  actual result - true*/
+3. "" == 0;
+
+/*false because of data types
+ actual result - as predicted */
+4. "" === 0;
+
+/*true because we are not strictly comparing data types
+actual result - as predicted */
+5."0" == 0;
+
+/*false because of not matching data types
+actual result - as predicted */
+6. "0" === 0;
+
+/*i predict false because null is something you can use as a placeholder and is defined
+actual result - true */
+7. null == undefined;
+
+/*true because we are not strictly comparing data types
+actual result - as predicted */
+8. null === undefined;
+
+/*i predict false because 0 is a value which null is not
+actual result - as predicted */
+9. null == 0;
+
+/* false because null holds no value
+actual result - true  */
+10. null >= 0;
+
+/* false again because null has no number value
+actual result - as predicted*/
+11. null > 0;
+
+/* true because its the same value
+actual result - false  */
+12. NaN == NaN
+
+/*true becuase it is the same data type
+actual result - false */
+13. NaN === NaN
+
+/* i do not have a prediction i dont know what object.is does*/
+14. Object.is(NaN, NaN)
+
+/*i predict true because prefix operators implicitly convert
+values into the number type
+actual result - true */
+15. +0 === -0
+
+/* i do not have a prediction i dont know what object.is does*/
+16. Object.is(+0, -0)
+
+/* true because the values will be conveerted by javascript
+actual result -  as predicted*/
+17. [1,2,3] == "1,2,3"
+
+/*i pedrict true because there is no value inside the array
+actual result - as predicted */
+18. [] == false
+
+/* i predict false because there is no value inside the array
+actual result - true*/
+19. [] == 0
+
+/* i predict true because zero is equals to false when you convert a boolean
+actual result - as predicted */
+20. [0] == false
+
+//part B
+
+let newPassword;
+let confirmPassword;
+let currentEmail;
+let confirmEmail;
+
+ternaries for the if checks
+let passWordMessage = newPassword === confirmPassword ? "successfully created" : "your passwords do not match please check and try again";
+
+let emailMessage = currentEmail == confirmEmail ? "successfully created" : "your emails do not match please check and try again";
+
+let passWordSafetyMessage = newPassword != currentEmail ? "you cannot have your email the same as your password it is not safe please change as needed" : "successfully created";
+
+let passWordLengthMessage = newPassword.length<=8 ? "please make sure your password is atleast 8 characters long" : "succesfully created";
+
+
 
 
 
