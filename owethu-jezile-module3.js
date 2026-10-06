@@ -527,4 +527,77 @@ and i would use splice or pop instead depending on the item index */
 }
 
 //2.
-{let adminUser = 1}
+{
+    const READ = 1; // binary 0001
+    const WRITE = 2; // binary 0010
+    const DELETE = 4; // binary 0100
+    const ADMIN = 8; // binary 1000
+    
+    let userAdmin = READ | WRITE |DELETE | ADMIN ;
+    console.log(userAdmin);
+}
+
+//3.
+let checkPerm = userReadWrite & READ ? "yes" : "No"
+
+//4.
+let checkPerm2 = userReadWrite & DELETE ? "yes" : "No"
+
+//5.
+let userReadWrite = READ | WRITE | DELETE;
+
+//6.
+let revokePerm = userReadWrite & !WRITE ;
+
+//7. i do not know what XOR is or what it does but ill try
+
+^userAdmin.ADMIN
+
+//8.i also did not encounter this in the modules we have done
+SUPER_ADMIN<<userAdmin;
+
+/*interview questions
+
+1- for better security and it uses less space
+
+2- reading it in code would be hard unlike a string
+
+3- & is to check whether something has this and that then && is for comparison ,same applies with | and ||
+
+if you confuse them lets say you use || instead of | when assigning the permisions you might return only the first permision if true and omiting the rest then the user can only use one permission*/
+
+//challenge7
+// scenario1
+
+let savingsAccount = 25000;
+let annualInt = savingsAccount*(7.5/100);
+let monthlyInt = annualInt/12
+
+let finalBalance = (savingsAccount + annualInt)*3;
+console.log(finalBalance.toFixed(2));//balance is 80625
+
+let totalInt = finalBalance - savingsAccount;
+console.log(totalInt.toFixed(2));//55625
+
+//battling with this section i never did accounting
+
+//scenario2
+let balance=;
+let accFee = balance>=25000 ? "free" :balance>=1000 ? "R50 fee" :balance>=5000 ? "R75 feee":"R25 fee"
+/* Test 1: Balance of R500
+console.log("Annual fee: R" + (monthlyFee * 12));
+Annual fee: R300
+
+Test 2: Balance of R1500
+console.log("Annual fee: R" + (monthlyFee * 12));
+Annual fee: R600
+
+Test 3: Balance of R10000
+console.log("Annual fee: R" + (monthlyFee * 12));
+Annual fee: R900
+
+Test 4: Balance of R50000
+console.log("Annual fee: R" + (monthlyFee * 12));
+Annual fee: R0
+
+ */
