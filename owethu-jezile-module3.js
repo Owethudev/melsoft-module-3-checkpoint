@@ -650,3 +650,86 @@ let summary = alert(" Owethu, 23 years old,Adult,subscribed");
 
    3- it returns the defaut value the developer sets
    */
+
+//challenge9
+
+//1.price is a wrong data type and var is being used to declare instead of let which is the modern way to declare in javascript
+var item1Price = "199.99";
+
+//2.price is a wrong data type and var is being used to declare instead of let  which is the modern way to declare in javascript
+var item2Price = "49.50";
+
+//3. var is being used to declare instead of let  which is the modern way to declare in javascript
+var item3Price = 125;
+
+//4.quantity is a wrong data type and var is being used to declare instead of let  which is the modern way to declare in javascript
+var quantity = "2";
+
+//5. var is being used to declare instead of let  which is the modern way to declare in javascript
+var discountCode = "SAVE10";
+
+//6.incorrect datatype it should be a boolean not a string var is being used to declare instead of let  which is the modern way to declare in javascript
+var isLoggedIn = "true";
+
+//7.var is being used to declare instead of let  which is the modern way to declare in javascript
+var customerAge = null;
+
+//8.precedenc wil give us a wrong subtotal so brackets aree needed and var is being used to declare instead of let  which is the modern way to declare in javascript
+var subtotal = item1Price + item2Price + item3Price * quantity;
+
+//9.using , instead of + for concatenation and not using modern template literals which is bad for readability
+console.log("Subtotal:", subtotal);
+
+//10. var is being used to declare instead of let  which is the modern way to declare in javascript
+var discount = discountCode == "SAVE10" ? 0.1 : 0;
+
+//11.var is being used to declare instead of let  which is the modern way to declare in javascript
+var discountAmount = subtotal * discount;
+
+//12.var is being used to declare instead of let  which is the modern way to declare in javascript
+var afterDiscount = subtotal - discountAmount;
+
+//13.var is being used to declare instead of let  which is the modern way to declare in javascript
+var vat = afterDiscount * 0.15;
+
+//14.var is being used to declare instead of let  which is the modern way to declare in javascript
+var total = afterDiscount + vat;
+
+//15.var is being used to declare instead of let  which is the modern way to declare in javascript
+var canCheckout = isLoggedIn && customerAge > 18;
+
+//16.using , instead of + for concatenation and not using modern template literals which is bad for readability
+console.log("Can checkout?", canCheckout);
+
+//17.if there is no discount we must return 0 not null var is being used to declare instead of let  which is the modern way to declare in javascript
+var seniorDiscount = customerAge >= 60 ? total * 0.05 : null;
+
+//18.var is being used to declare instead of let  which is the modern way to declare in javascript
+var finalTotal = total - seniorDiscount;
+
+//19.not using template literals which is bad for readability
+console.log("Total: R" + finalTotal.toFixed(2));
+
+
+//Refactored version below
+{
+let item1Price = 199.99;
+let item2Price = 49.50;
+let item3Price = 125;
+let quantity = 2;
+let discountCode = "SAVE10";
+let isLoggedIn = true;
+let customerAge = null;
+let subtotal = item1Price + item2Price + (item3Price* quantity);
+console.log(`Subtotal : ${subtotal}`);
+let discount = discountCode == "SAVE10" ? 0.1 : 0;
+let discountAmount = subtotal * discount;
+let afterDiscount = subtotal - discountAmount;
+let vat = afterDiscount * 0.15;
+let total = afterDiscount + vat;
+let canCheckout = isLoggedIn && customerAge > 18;
+console.log(`Can checkout ? : ${canCheckout}`);
+let seniorDiscount = customerAge >= 60 ? total * 0.05 : 0;
+let finalTotal = total - seniorDiscount;
+console.log(`FinalTotal : R ${finalTotal.toFixed(2)}`);
+}
