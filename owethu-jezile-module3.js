@@ -627,19 +627,19 @@ window.alert("Welcome to SA");
 window.prompt("enter your name","Guest");
 
 //3.
-{ let age = Number(prompt("please enter age"));
-let validAge = typeof age === "number" && !isNaN && age >= 1 && age <= 120;
-}
+ let userAge = Number(prompt("please enter age"));
+let validAge = typeof userAge === "number" && !isNaN(userAge) && userAge >= 1 && userAge <= 120;
+
 
 //4.
 
-let tier =  age>60 ? "Senior": age>=18 ? "Adult" :"Youth"
+let tier =  userAge>60 ? "Senior": userAge>=18 ? "Adult" :"Youth"
 
 //5.
 let result = confirm("do you want to  subscribe to our newsletter?");
 
 //6.
-let summary = alert(" Owethu, 23 years old,Adult,subscribed");
+  window.alert( `${name}, ${userAge} years old, ${tier}, ${subscription}`);
 
 /* interview answers :
    1- because the block you fro interacting with the rest of the site until you take action on them

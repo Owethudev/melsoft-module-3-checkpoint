@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Banking Calculator</title>
+</head>
+
+<body>
+
+<script>
+
+   
+    window.alert("Welcome to SA");
+
+    let name = window.prompt("Enter your name", "Guest");
+
+    let userAge = Number(window.prompt("Please enter age"));
+
+   let validAge = typeof userAge === "number" && !isNaN(userAge) && userAge >= 1 && userAge <= 120;
+
+    let tier =  userAge>60 ? "Senior": userAge>=18 ? "Adult" :"Youth"
+
+    let result = window.confirm("Do you want to subscribe to our newsletter?");
+
+    let subscription = result ? "subscribed" : "not subscribed";
+
+    window.alert( `${name}, ${userAge} years old, ${tier}, ${subscription}`);
+
+
+
+</script>
+
+</body>
+</html>
