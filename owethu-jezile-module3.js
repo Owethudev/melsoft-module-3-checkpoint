@@ -281,8 +281,125 @@ step by step "5"-3=2 then 2+2=4 */
 
 /*interview answer- you add parentheses to make code easy to ready */
 
+//Challenge4
+
+//partA
+let percentage =;
+let grade = percentage>=90 ? "A": percentage>=80 ? "B": percentage>=70 ? "C": percentage>=60 ? "D": percentage>=50 ? "E": "F";
+
+/* result for 95 = A;
+   result for 82 = B;
+   result for 73 = C ;
+   result for 65 = D;
+   result for 54 = E;
+   result for 42 = F;
+   result for 0 = F;
+   result for 100 = A;
+*/
+
+//partB
+
+//user 1 object
+const user1 ={
+    displayName:undefined,
+    theme:undefined,
+    maxResults:undefined,
+    lastLogin:undefined,
+    notificationCount:undefined
+};
+
+//tests for user1
+let displayName = user1.displayName || "Guest User";
+let theme = user1.theme || "Guest User";
+let maxResults = user1.maxResults || 10 ;
+
+//i did not know what nullish coalescing is i had to go read some documentation before answering
+let lastLogin = user1.lastLogin ?? "Never";
+let notificationCount = user1.notificationCount ?? 0;
+
+//user 2 object
+const user2 ={
+    displayName:undefined,
+    theme:"",
+    maxResults:undefined,
+    lastLogin:undefined,
+    notificationCount:0
+};
+
+//tests for user2
+let displayName1 = user1.displayName || "Guest User";
+let theme1 = user1.theme || "Guest User";
+let maxResults1 = user1.maxResults || 10 ;
+let lastLogin1 = user1.lastLogin ?? "Never";
+let notificationCount1 = user1.notificationCount ?? 0;
 
 
 
+/* ?? behaves different because its a nullish coalescing and || is OR which gives the option between
+two options unlike the nullish which  just gives you ption 2 when option 1 is null or undefined */
+
+//part c
+//1
+ console.log(user && user.address && user.address.city);
+ 
+ //2
+  console.log(user?.address?.city);
+
+//3
+console.log(user?.address?.city ?? 'Unknown city');
+
+//part d
+// my predictions are null,0,"first truthy",0,false,"third","yes",true,1,i dont know
+
+// 1
+// Prediction: null ,datatype: string
+console.log(null || undefined || 0 || "" || "finally");
+// Actual: "finally" | string
+
+// 2
+// Prediction: 0 ,datatype: number
+console.log(null ?? undefined ?? 0 ?? "" ?? "finally");
+// Actual: 0 ,datatype: number
+
+// 3
+// Prediction: "first truthy" ,datatype: string
+console.log(0 || "first truthy");
+// Actual: "first truthy" ,datatype: string
+
+// 4
+// Prediction: 0 ,datatype: number
+console.log(0 ?? "first non-nullish");
+// Actual: 0 ,datatype: number
+
+// 5
+// Prediction: false ,datatype: boolean
+console.log(true && false && "never reached");
+// Actual: false ,datatype: boolean
+
+
+// 6
+// Prediction: "third" ,datatype: string
+console.log("first" && "second" && "third");
+// Actual: "third" ,datatype: string
+
+// 7
+// Prediction: "yes" ,datatype: string
+console.log(false || (true && "yes"));
+// Actual: "yes" ,datatype: string
+
+// 8
+// Prediction: "yes" ,datatype: string
+console.log((false || true) && "yes");
+// Actual: "yes" ,datatype: string
+
+// 9
+// Prediction: 1 ,datatype: number
+console.log(1 && 2 && 3);
+// Actual: 3 ,datatype: number
+
+// 10
+// Prediction: i dont know
+console.log(null?.foo?.bar?.baz);
+// Actual: undefined,datatype:| undefined
 
 
