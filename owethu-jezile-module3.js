@@ -403,3 +403,46 @@ console.log(null?.foo?.bar?.baz);
 // Actual: undefined,datatype:| undefined
 
 
+//challenge5
+//partA
+
+//prediction and output
+/*prediction - number
+  output - number*/
+1. typeof 42
+
+/*prediction - string
+output- string  */
+2. typeof "hello"
+
+/*prediction - boolean
+output - boolean*/
+3. typeof true
+
+/*prediction -undefined
+output - undefined */
+4. typeof undefined
+
+/*prediction -null
+output- object */
+5. typeof null 
+
+/* prediction - object
+ouput- object*/
+6. typeof {}
+
+/* prediction - array
+output- object */
+7. typeof [] 
+
+/* prediction - function
+output- function */
+8. typeof function() {}
+
+/*prediction - NaN
+output- number */
+9. typeof NaN
+
+/*prediction - undefined
+output - undefined */
+10. typeof undeclaredVariable
