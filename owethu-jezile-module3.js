@@ -601,3 +601,52 @@ console.log("Annual fee: R" + (monthlyFee * 12));
 Annual fee: R0
 
  */
+
+//scenario3
+let sendAmount = 15750.33;
+let exchangeRate = 18.42;
+let bankCharge = sendAmount*(2.5/100);
+
+//commission
+console.log(bankCharge.toFixed(2));//393.76
+
+//after commission
+let afterComm = sendAmount-bankCharge;
+console.log(afterComm.toFixed(2));//15356.57
+
+//USD received
+console.log((afterComm/exchangeRate).toFixed(2));//833.69 USD
+
+// final question:It made the calculations and numbers have alot of decimal places and i handled it with .toFixed(2)
+
+//challenge8
+//1.
+window.alert("Welcome to SA");
+
+//2.
+window.prompt("enter your name","Guest");
+
+//3.
+{ let age = Number(prompt("please enter age"));
+let validAge = typeof age === "number" && !isNaN && age >= 1 && age <= 120;
+}
+
+//4.
+
+let tier =  age>60 ? "Senior": age>=18 ? "Adult" :"Youth"
+
+//5.
+let result = confirm("do you want to  subscribe to our newsletter?");
+
+//6.
+let summary = alert(" Owethu, 23 years old,Adult,subscribed");
+
+/* interview answers :
+   1- because the block you fro interacting with the rest of the site until you take action on them
+   and it can be a problem because users can choose not to engage with the window but in that it wil block their
+   access to the rest of the site
+   
+   2-a developer can use a input form and have messages dynamically change on the program and appear without blocking anything
+
+   3- it returns the defaut value the developer sets
+   */
