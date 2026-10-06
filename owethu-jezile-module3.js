@@ -446,3 +446,85 @@ output- number */
 /*prediction - undefined
 output - undefined */
 10. typeof undeclaredVariable
+
+//difference between an object and array
+
+let object = {} ; let array = [];
+
+//partb
+/*prediction - true
+output - true */
+1. [] instanceof Array
+
+/*prediction - true
+output - true*/
+2. [] instanceof Object
+
+/*prediction - true
+output - true */
+3. {} instanceof Object
+
+/*prediction - false
+output- false  */
+4. "hello" instanceof String
+
+/*prediction - true
+output- true  */
+5. new String("hello") instanceof String
+
+/*prediction - false
+output - false */
+6. 42 instanceof Number
+
+/* prediction - true
+output - true*/
+7. new Date() instanceof Date
+
+/*prediction- false
+output - true*/
+8. /abc/ instanceof RegExp
+
+/*typeof is the right tool when we have a primitive data type and instanceof os wrong there
+  instanceof is the right tool for when we have object types to check the instance of a data type inside that object
+  and typeof wont be the right tool at that time because it wi return an object */
+
+//partc 
+//1.
+const user = {
+    name:"Lerato",
+    age:25,
+    role: "student"
+};
+
+delete user.role
+
+//2.
+let x = 5;
+delete x
+
+//3.
+const arr = [1, 2, 3, 4];
+delete arr[1];
+//delete does not remove the value it just leaves an empty item
+
+//4.
+delete Math.PI
+//it does not work and non configurable property is something you cannot edit or add yourself it is built in
+
+/* interview answer : i will not use delete because it does not remove items in the array it just leaves and empty one
+and i would use splice or pop instead depending on the item index */
+
+//challenge6
+//1.
+{
+    const READ = 1; // binary 0001
+    const WRITE = 2; // binary 0010
+    const DELETE = 4; // binary 0100
+    const ADMIN = 8; // binary 1000
+    
+    let userReadWrite = READ | WRITE ;
+    console.log(userReadWrite);
+}
+
+//2.
+{let adminUser = 1}
