@@ -733,3 +733,18 @@ let seniorDiscount = customerAge >= 60 ? total * 0.05 : 0;
 let finalTotal = total - seniorDiscount;
 console.log(`FinalTotal : R ${finalTotal.toFixed(2)}`);
 }
+
+//challenge 10 
+
+/*1. && and || are logical operators and | & as newly introduced in this project
+are used to check conditions that contain bits
+
+2.the nullish coalescing i will use when i have null to deal with in two of the values i have and 
+i do not have a concrete example because this is a new concept and i have not applied it yet
+
+3.it returns object because of how javascript is and if i want to check specifically the type an object is 
+i will use instanceof instead of typeof which is for primitive data types
+
+4. because computers store numbers in binary which causes rounding issues and i used toFixed(2) to solve it and give me to decimal places instead of many
+
+5.the difference between instanceof and typeof took me some time to grasp it really never clicked until i did more reading after being introduced*/
